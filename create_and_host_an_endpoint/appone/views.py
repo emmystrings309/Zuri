@@ -6,6 +6,9 @@ from django.http import JsonResponse
 from datetime import datetime
 import pytz
 
+def index(request):
+    return render(request, 'index.html')
+
 def my_endpoint(request):
     slack_name = request.GET.get('slack_name')
     track = request.GET.get('track')
